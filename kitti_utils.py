@@ -94,5 +94,5 @@ def generate_depth_map(calib_dir, velo_filename, cam=2, vel_depth=False):
         y_loc = int(velo_pts_im[pts[0], 1])
         depth[y_loc, x_loc] = velo_pts_im[pts, 2].min()
     depth[depth < 0] = 0
-
+    print(depth)
     return depth
